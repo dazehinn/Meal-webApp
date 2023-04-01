@@ -7,17 +7,33 @@
   font-style: normal;
   font-size: 74px;
 }
-
-body {
-  background-color: bisque;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-h1,
-h2 {
-  background-color: magenta;
-  font-family: 'Booter Zero', serif;
+nav {
+  display: flex;
+  margin: 25px 5px;
 }
 
-h2 {
-  background-color: aqua;
+.logo {
+  width: 55px;
+  margin-left: 32px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
 }
