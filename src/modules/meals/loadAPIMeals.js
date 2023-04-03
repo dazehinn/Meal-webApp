@@ -6,7 +6,7 @@ const loadAPIMeals = async () => {
   const meals = await fetchAPIMeals();
   meals.forEach((meal) => {
     const containerElement = mealCard(meal);
-    displayMeal(containerElement);
+    displayMeal(containerElement, meal);
   });
 };
 
