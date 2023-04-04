@@ -17,7 +17,7 @@ const fetchMealLikes = async (mealId) => {
       mealLikes.push(like.likes);
     }
   });
-  return mealLikes[0]; 
+  return mealLikes[0];
 };
 
 export {

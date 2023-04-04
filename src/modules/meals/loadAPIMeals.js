@@ -4,7 +4,6 @@ import fetchAPIMeals from './fetchAPIMeals.js';
 import { fetchMealLikes } from '../likes/fetchAPILikes.js';
 
 const totalMeals = document.querySelector('.total-meals');
-const apiUrl = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 
 const loadAPIMeals = async () => {
   const meals = await fetchAPIMeals();
