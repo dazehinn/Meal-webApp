@@ -1,8 +1,9 @@
+import displayAPIComments from './displayAPIComments.js';
 import displayComments from './displayComments.js';
-import fetchAPIComments from './fetchAPIComments.js';
+import fetchAPIMealDetails from './fetchAPIMealDetails.js';
 
 const loadAPIComments = async (idMeal) => {
-  const comments = await fetchAPIComments(idMeal);
+  const comments = await fetchAPIMealDetails(idMeal);
   const category = document.querySelector('.category');
   category.setAttribute('id', idMeal);
   const area = document.querySelector('.area');
@@ -16,6 +17,7 @@ const loadAPIComments = async (idMeal) => {
   mealName.innerHTML = commentArray.strMeal;
   mealImage.src = commentArray.strMealThumb;
   displayComments();
+  displayAPIComments(idMeal);
 };
 
 export default loadAPIComments;

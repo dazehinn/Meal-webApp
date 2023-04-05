@@ -1,7 +1,12 @@
+const commentUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/jcTX0b7AP0QeAh1m307k/comments?item_id=';
+
 const fetchAPIComments = async (idMeal) => {
-  const apiUrl = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
-  const response = await fetch(apiUrl + idMeal);
-  const comments = await response.json();
+  let comments = [];
+  const response = await fetch(commentUrl + idMeal);
+  if (response.status >= 400 && response.status < 600) {
+    return false;
+  }
+  comments = await response.json();
   return comments;
 };
 
