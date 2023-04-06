@@ -1,4 +1,5 @@
 import loadAPIComments from '../comments/loadAPIComments.js';
+import updateLikes from '../likes/updateLikes.js';
 
 const displayMeal = (mealCard, meal) => {
   const mealsList = document.getElementById('meals_list');
@@ -7,6 +8,10 @@ const displayMeal = (mealCard, meal) => {
   const commentsBtn = document.getElementById(`comments_${meal.idMeal}`);
   commentsBtn.addEventListener('click', () => {
     loadAPIComments(meal.idMeal);
+  });
+  const likeBtn = document.querySelector(`#like_${meal.idMeal}`);
+  likeBtn.addEventListener('click', async () => {
+    await updateLikes(meal.idMeal);
   });
 };
 
