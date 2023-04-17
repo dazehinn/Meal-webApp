@@ -4,8 +4,6 @@ import fetchAPIMeals from './fetchAPIMeals.js';
 import { fetchMealLikes } from '../likes/fetchAPILikes.js';
 import countMeals from './countMeals.js';
 
-// const totalMeals = document.querySelector('.total-meals');
-
 const loadAPIMeals = async () => {
   const meals = await fetchAPIMeals();
   meals.forEach(async (meal) => {
@@ -14,7 +12,6 @@ const loadAPIMeals = async () => {
     displayMeal(containerElement, meal);
     countMeals();
   });
-  // totalMeals.innerHTML = `(${meals.length}) meals`;
 };
 
 export default loadAPIMeals;
